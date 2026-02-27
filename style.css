@@ -1,0 +1,804 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+    background: black;
+    color: white;
+}
+
+header{
+    margin-top: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 9%;
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: black;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1600px;
+}
+
+.Navbar-logo {
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar-container .navbar-menu {
+  display: flex;
+  text-align: center;
+  gap: 4rem;
+  list-style: none;
+}
+
+.navbar-container .navbar-menu.active {
+  display: flex;
+}
+
+.navbar-container .navbar-menu li a {
+  text-decoration: none;
+  color: white;
+  font-size: 4rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all 0.7s ease;
+  white-space: nowrap;
+}
+
+.navbar-container .navbar-menu li a:hover {
+  color: black;
+  background-color: green;
+  border: 2px solid green;
+}
+
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+    
+}
+
+.gradient {
+  border: 5px solid green;
+  background: linear-gradient(180deg, #000000, #014421);
+  margin-top: 30px;
+  
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background: linear-gradient(180deg, #000000, #014421);
+}
+
+.home .home-content h1{
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+span{
+    color: green;
+}
+
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+}
+
+.home-img img{
+    position: relative;
+    width: 32vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px solid green;
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+.home-img img:hover{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid green;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: green;
+}
+
+.social-icons a:hover{
+    color: black;
+    transform: scale(1.3) translateY(-5px);
+    background-color: green;
+    box-shadow: 0  0 25px green;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: green;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid green;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: green;
+    color: black;
+    box-shadow: 0 0 25px green;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "software Developer";
+    color: green;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid black;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 20px;
+}
+
+.box {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background-color: black;
+  color: white;
+  border: 5px dashed green;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 20px;
+    color: white;
+    font-weight: 600;
+    border: 5px solid green;
+}
+
+.sub-title {
+    text-align: center;
+    margin-bottom: 15px;
+    max-width: 100%;
+}
+
+.barskill {
+    width: 100%;
+    height: 6px;
+    background: #bbb;
+    border-radius: 10px;
+}
+
+.progress {
+  height: 6px;
+  background: green;
+  border-radius: 10px;
+}
+
+.ExpBox {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2.8rem;
+  background-color: black;
+  font-size: 1.6rem;
+  color: white;
+  letter-spacing: 0.3rem;
+  border: 5px dashed green;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  letter-spacing: 0.3rem;
+  border: 5px solid green;
+  border-radius: 4rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+  flex-wrap: wrap;
+  
+}
+
+.demo:hover {
+  transform: scale3d(1.03);
+  background-color: green;
+  color: black;
+  box-shadow: 0 0 25px green;
+}
+
+.cf {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  border: 5px none transparent;
+  border-radius: 15px;
+  box-shadow: 0 10px 10px green;
+} 
+
+.cf img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid green;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Developer";
+    }
+    41%, 60%{
+        content: "Web Designer";
+    }
+    61%, 80%{
+        content: "Youtuber";
+    }
+    81%, 100%{
+        content: "Script Writer";
+    }
+}
+
+@media (max-width: 1000px){
+    .home{
+        gap: 4rem;
+    }
+    
+    .container{
+      gap: 4rem;
+    }
+}
+
+@media(max-width:995px){
+    .home{
+        flex-direction: column;
+        margin: 5rem 4rem;
+    }
+
+    .home .home-content h3{
+        font-size: 2.5rem;
+    }
+
+    .home-content h1{
+        font-size: 5rem;
+    }
+
+    .home-img img{
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 880px){
+  .navbar {
+    backdrop-filter: none;
+    position: fixed;
+  }
+  
+  .navbar-container .navbar-menu {
+    display: none;
+    flex-direction: column;
+    align-self: flex-start;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 250px;
+    top: 80px;
+    right: 0;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0 0 0 0.5);
+    backdrop-filter: blur(10px);
+  }
+  
+  .navbar-toggle {
+    display: block;
+    z-index: 999;
+  }
+  
+  .navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+  }
+  .navbar-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+  }
+  .navbar-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+  }
+  
+}
+
+
+
+/** Responsif Layout **/
+@media (max-width: 2000px) {
+
+  .navbar-container .navbar-menu li a {
+    font-size: 3.5rem;
+  }
+
+  .Navbar-logo {
+    font-size: 4rem;
+    color: green;
+  }
+  
+  .box h3 {
+    text-align: center;
+    font-size: 3.5rem;
+  }
+  
+  .box p {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  .section-title {
+    font-size: 4rem;
+  }
+  
+  .sub-title {
+    font-size: 3rem;
+  }
+  
+  .skill span {
+    font-size: 3rem;
+  }
+  
+  .percent {
+    font-size: 3rem;
+    color: #bbb;
+  }
+  
+  .ExpBox h3 {
+  font-size: 3rem;
+  text-align: center;
+  }
+  
+  .ExpBox p {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .cf h3 {
+    padding: 10px 50px;
+    text-align: left;
+    font-size: 3rem;
+  }
+  
+  .cf p {
+    padding: 10px 50px;
+    text-align: left;
+    font-size: 2.5rem;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 1500px) /**Dekstop**/{
+
+  .navbar-container .navbar-menu li a {
+    font-size: 3rem;
+  }
+
+  .Navbar-logo {
+    font-size: 4rem;
+    color: green;
+  }
+  
+  .box h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .box p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  .section-title {
+    font-size: 4rem;
+  }
+  
+  .sub-title {
+    font-size: 3rem;
+  }
+  
+  .skill span {
+    font-size: 2rem;
+  }
+  
+  .percent {
+    font-size: 2rem;
+    color: #bbb;
+  }
+  
+  .ExpBox h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  }
+  
+  .ExpBox p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .cf h3 {
+    padding: 10px;
+    text-align: left;
+    font-size: 2rem;
+  }
+  
+  .cf p {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+
+  
+}
+
+@media (max-width: 1200px) /** Laptop**/{
+
+  .navbar-container .navbar-menu li a {
+    font-size: 2rem;
+  }
+
+  .Navbar-logo {
+    font-size: 4rem;
+    color: green;
+  }
+  
+  .box h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .box p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  .section-title {
+    font-size: 4rem;
+  }
+  
+  .sub-title {
+    font-size: 3rem;
+  }
+  
+  .skill span {
+    font-size: 2rem;
+  }
+  
+  .percent {
+    font-size: 2rem;
+    color: #bbb;
+  }
+  
+  .ExpBox h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  }
+  
+  .ExpBox p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .cf h3 {
+    padding: 10px;
+    text-align: left;
+    font-size: 2rem;
+  }
+  
+  .cf p {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+  
+}
+
+@media (max-width: 768px) /** Tablets**/{
+  .Navbar-logo {
+    font-size: 4rem;
+    color: green;
+  }
+  
+  .box h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .box p {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  .section-title {
+    font-size: 3.5rem;
+  }
+  
+  .sub-title {
+    font-size: 2.5rem;
+  }
+  
+  .skill span {
+    font-size: 2rem;
+  }
+  
+  .percent {
+    font-size: 2rem;
+    color: #bbb;
+  }
+  
+  .ExpBox h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  }
+  
+  .ExpBox p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .cf h3 {
+    padding: 10px;
+    text-align: left;
+    font-size: 2rem;
+  }
+  
+  .cf p {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) /** Phones **/ {
+  .navbar-container {
+    padding: 0 1rem;
+  }
+
+  .Navbar-logo {
+    font-size: 4rem;
+    color: green;
+  }
+
+  .navbar-container .navbar-menu li a {
+    font-size: 3rem;
+    padding: 5px 15px;
+  }
+  
+  .box h3 {
+    text-align: center;
+    font-size: 3rem;
+  }
+  
+  .box p {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10px;
+    word-wrap: break-word;
+  }
+  
+  .section-title {
+    font-size: 3rem;
+  }
+  
+  .sub-title {
+    font-size: 2.5rem;
+  }
+  
+  .skill span {
+    font-size: 2.5rem;
+  }
+  
+  .percent {
+    font-size: 2.5rem;
+    color: #bbb;
+  }
+  
+  .ExpBox h3 {
+  font-size: 2.5rem;
+  text-align: center;
+  }
+  
+  .ExpBox p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+
+  .cf h3 {
+    padding: 10px;
+    text-align: left;
+    font-size: 2rem;
+  }
+  
+  .cf p {
+    padding: 10px;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .footer-text {
+    color: white;
+    font-size: 2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+  
+}
