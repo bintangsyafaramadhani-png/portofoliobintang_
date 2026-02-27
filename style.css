@@ -275,19 +275,6 @@ span{
     max-width: 100%;
 }
 
-.barskill {
-    width: 100%;
-    height: 6px;
-    background: #bbb;
-    border-radius: 10px;
-}
-
-.progress {
-  height: 6px;
-  background: green;
-  border-radius: 10px;
-}
-
 .ExpBox {
   display: inline-block;
   justify-content: center;
